@@ -13,7 +13,7 @@ interface ChatMessage {
 }
 
 export default function RobotAssistant() {
-  const [isMinimized, setIsMinimized] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(true);
   const [chatHistory, setChatHistory] = useState<ChatMessage[]>([
     {
       text: "Hallo! Ik ben Turbino, uw persoonlijke assistent van Trivi-Turbo. Hoe kan ik u vandaag helpen met uw website wensen?",
