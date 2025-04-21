@@ -20,7 +20,7 @@ const portfolioItems = [
       "Een platform voor jeugdteams dat mentale gezondheid, motivatie en teambeheer op één plek samenbrengt. Gebouwd met React en Next.js.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-2quqE0vORs9zNGxlDsyBRbxkVXcOkq.png",
     tags: ["Sport", "Mentale Gezondheid", "Teammanagement"],
-    features: ["Responsief Design", "Dashboard", "Gebruikersbeheer", "Prestatietracking"],
+    features: ["Wachtlijst", "Blog", "Brandbook"],
     completionTime: "24 uur",
     testimonial: {
       text: "TriviTurbo heeft onze visie op teamgeest, sport en mentale gezondheid perfect vertaald naar een gebruiksvriendelijk platform. De snelheid waarmee ze hebben geleverd, was indrukwekkend!",
@@ -35,7 +35,7 @@ const portfolioItems = [
       "Een elegante webshop voor een meubelwinkel met een focus op karaktervolle, innovatieve ontwerpen. Gebouwd met Shopify en custom CSS.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jotcDegGXQenfuNw69TpjZw1t9IraG.png",
     tags: ["Meubels", "E-commerce", "Design"],
-    features: ["Productcatalogus", "Winkelwagen", "Betalingsintegratie", "Productfilters"],
+    features: ["Productcatalogus", "Blog"],
     completionTime: "24 uur",
     testimonial: {
       text: "Omdat wij ons met onze hoogwaardige designmeubels onderscheiden van andere interieurwinkels, is het belangrijk dat dit ook goed via de website tot uiting komt. De jongens van Trivi-Turbo hebben dat perfect aangevoeld. Dankjewel!",
@@ -50,7 +50,7 @@ const portfolioItems = [
       "Een premium website voor het showcasen van luxe auto's met gedetailleerde productpagina's en een strak design. Gebouwd met Vue.js.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-46uR6nGAvEr9DQtHxkUSKG4hZBwYux.png",
     tags: ["Automotive", "Luxe", "Showcase"],
-    features: ["Geavanceerde filtering", "360° Weergave", "Specificatievergelijking", "Testrit aanvragen"],
+    features: ["Geavanceerde filtering", "Blog"],
     completionTime: "24 uur",
     testimonial: {
       text: "De samenwerking met Trivi-Turbo verliep vlekkeloos. Ze hebben een website opgeleverd die precies de premium uitstraling heeft waar we naar op zoek waren. We zijn vooral onder de indruk van het gebruiksgemak en het strakke design.",
@@ -65,7 +65,7 @@ const portfolioItems = [
       "Een smaakvolle website voor een ambachtelijke brouwerij met productpresentatie en online besteloptie. Gebouwd met WordPress en WooCommerce.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-7rbUdTGPbNLxn9LAFKoq0PYsw8XfY0.png",
     tags: ["Brouwerij", "Ambachtelijk", "E-commerce"],
-    features: ["Productcatalogus", "Blog", "Evenementenkalender", "Leeftijdsverificatie"],
+    features: ["Productcatalogus", "Blog"],
     completionTime: "24 uur",
     testimonial: {
       text: "Na een leuk gesprek met Floris te hebben gehad, hebben wij onze content aangeleverd. De volgende dag stond onze site al online. Super snel en precies zoals we het voor ogen hadden. Proost, jongens!",
@@ -81,7 +81,7 @@ const portfolioItems = [
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-04-20%20at%2014.29.01-YxoSc1oWT6v9RCBwYyIPqW2eBfvipF.png",
     tags: ["Natuur", "Activiteiten", "Boekingen"],
-    features: ["Online reserveringen", "Interactieve kaart", "Activiteitenoverzicht", "Recensiesysteem"],
+    features: ["Blog"],
     completionTime: "24 uur",
     testimonial: {
       text: "Na een aantal nare ervaringen met websitebouwers, hoorde ik via een vriend over Trivi-Turbo. Sinds het eerste contact met Floris had ik al vertrouwen in de samenwerking. We zijn superblij met het eindresultaat, het straalt echt uit wie wij zijn en waar wij voor staan. Bovendien maakt het het voor ouders en jongeren heel gemakkelijk om zichzelf in te lezen en een plekje op kamp te boeken!",
