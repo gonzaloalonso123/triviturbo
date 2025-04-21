@@ -75,7 +75,7 @@ export default function TeamImageReveal() {
         >
           <div className="absolute inset-0 w-full h-full">
             <motion.div
-              className="absolute inset-0 w-full h-full"
+              className="absolute inset-0 w-full h-full shadow-md"
               variants={firstImageVariants}
               initial="initial"
               animate={isRevealed ? "revealed" : "initial"}
