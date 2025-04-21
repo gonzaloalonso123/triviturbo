@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Sparkles, Hand } from "lucide-react";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { debounce } from "lodash";
@@ -140,61 +140,55 @@ export default function TeamImageReveal() {
           <p className="text-base opacity-90">Met onze AI assistent</p>
         </motion.div>
 
-        <AnimatePresence mode="wait">
-          {isRevealed && (
+        {isRevealed && (
+          <motion.div
+            key="real-team-text"
+            className="absolute bottom-20 right-1/4 transform translate-x-1/2 bg-[#072ac8]/90 text-white px-4 py-2 rounded-lg shadow-lg"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.3 }}
+          >
+            <p className="font-bold text-xl">Ons Echte Team</p>
+            <p className="text-base opacity-90">Met onze mascotte Hank de Octopus</p>
+          </motion.div>
+        )}
+
+        {isRevealed && (
+          <>
             <motion.div
-              key="real-team-text"
-              className="absolute bottom-20 right-1/4 transform translate-x-1/2 bg-[#072ac8]/90 text-white px-4 py-2 rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              transition={{ duration: 0.3 }}
+              key="truth-text"
+              className="absolute top-[10%] left-0 z-30 bg-yellow-300 rounded-full px-4 py-2 font-bold text-black transform -rotate-12 shadow-lg"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ delay: 0.1, duration: 0.3 }}
             >
-              <p className="font-bold text-xl">Ons Echte Team</p>
-              <p className="text-base opacity-90">Met onze mascotte Hank de Octopus</p>
+              De waarheid!
             </motion.div>
-          )}
-        </AnimatePresence>
+            <motion.div
+              key="laugh-emoji"
+              className="absolute top-[20%] right-0 z-30 text-5xl transform rotate-12 bg-white/80 rounded-full p-2 shadow-lg"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 50 }}
+              transition={{ delay: 0.2, duration: 0.3 }}
+            >
+              🤣
+            </motion.div>
+            <motion.div
+              key="octopus-emoji"
+              className="absolute bottom-[30%] left-0 z-30 text-5xl transform -rotate-12 bg-white/80 rounded-full p-2 shadow-lg"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ delay: 0.3, duration: 0.3 }}
+            >
+              🐙
+            </motion.div>
+          </>
+        )}
 
-        <AnimatePresence mode="wait">
-          {isRevealed && (
-            <>
-              <motion.div
-                key="truth-text"
-                className="absolute top-[10%] left-0 z-30 bg-yellow-300 rounded-full px-4 py-2 font-bold text-black transform -rotate-12 shadow-lg"
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
-                transition={{ delay: 0.1, duration: 0.3 }}
-              >
-                De waarheid!
-              </motion.div>
-              <motion.div
-                key="laugh-emoji"
-                className="absolute top-[20%] right-0 z-30 text-5xl transform rotate-12 bg-white/80 rounded-full p-2 shadow-lg"
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 50 }}
-                transition={{ delay: 0.2, duration: 0.3 }}
-              >
-                🤣
-              </motion.div>
-              <motion.div
-                key="octopus-emoji"
-                className="absolute bottom-[30%] left-0 z-30 text-5xl transform -rotate-12 bg-white/80 rounded-full p-2 shadow-lg"
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
-                transition={{ delay: 0.3, duration: 0.3 }}
-              >
-                🐙
-              </motion.div>
-            </>
-          )}
-        </AnimatePresence>
-      </div>
-
-      <AnimatePresence mode="wait">
         {isRevealed && (
           <motion.div
             key="sparkles"
@@ -208,7 +202,7 @@ export default function TeamImageReveal() {
             <Sparkles className="absolute top-[40%] left-[10%] text-[#ffc600] w-5 h-5" />
           </motion.div>
         )}
-      </AnimatePresence>
+      </div>
     </div>
   );
 }
