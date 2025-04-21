@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import Image from "next/image"
-import { Star, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { useState } from "react";
+import Image from "next/image";
+import { Star, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Link from "next/link";
 
-// Portfolio items data
 const portfolioItems = [
   {
     id: 1,
@@ -23,8 +23,8 @@ const portfolioItems = [
     features: ["Responsief Design", "Dashboard", "Gebruikersbeheer", "Prestatietracking"],
     completionTime: "24 uur",
     testimonial: {
-      text: "Trivi-Turbo heeft onze visie perfect vertaald naar een gebruiksvriendelijk platform. De snelheid waarmee ze hebben geleverd was indrukwekkend!",
-      author: "Thomas Janssen, Oprichter NordicPro",
+      text: "TriviTurbo heeft onze visie op teamgeest, sport en mentale gezondheid perfect vertaald naar een gebruiksvriendelijk platform. De snelheid waarmee ze hebben geleverd, was indrukwekkend!",
+      author: "Klajdi, Oprichter NordicPro",
     },
   },
   {
@@ -38,7 +38,7 @@ const portfolioItems = [
     features: ["Productcatalogus", "Winkelwagen", "Betalingsintegratie", "Productfilters"],
     completionTime: "24 uur",
     testimonial: {
-      text: "Onze online verkopen zijn met 60% gestegen sinds de lancering van onze nieuwe website. De moderne uitstraling past perfect bij ons merk!",
+      text: "Omdat wij ons met onze hoogwaardige designmeubels onderscheiden van andere interieurwinkels, is het belangrijk dat dit ook goed via de website tot uiting komt. De jongens van Trivi-Turbo hebben dat perfect aangevoeld. Dankjewel!",
       author: "Lisa van der Meer, Eigenaar Trendy Meubels",
     },
   },
@@ -53,7 +53,7 @@ const portfolioItems = [
     features: ["Geavanceerde filtering", "360° Weergave", "Specificatievergelijking", "Testrit aanvragen"],
     completionTime: "24 uur",
     testimonial: {
-      text: "De website straalt precies de premium uitstraling uit die we zochten. Onze klanten zijn onder de indruk van het gebruiksgemak en design.",
+      text: "De samenwerking met Trivi-Turbo verliep vlekkeloos. Ze hebben een website opgeleverd die precies de premium uitstraling heeft waar we naar op zoek waren. We zijn vooral onder de indruk van het gebruiksgemak en het strakke design.",
       author: "Mark de Vries, Marketing Manager Auto Showcase",
     },
   },
@@ -68,7 +68,7 @@ const portfolioItems = [
     features: ["Productcatalogus", "Blog", "Evenementenkalender", "Leeftijdsverificatie"],
     completionTime: "24 uur",
     testimonial: {
-      text: "Trivi-Turbo begreep onze visie vanaf het eerste gesprek. De website weerspiegelt perfect de ambachtelijke essentie van ons merk.",
+      text: "Na een leuk gesprek met Floris te hebben gehad, hebben wij onze content aangeleverd. De volgende dag stond onze site al online. Super snel en precies zoals we het voor ogen hadden. Proost, jongens!",
       author: "Joris Bakker, Hoofdbrouwer Wolf Brew",
     },
   },
@@ -84,7 +84,7 @@ const portfolioItems = [
     features: ["Online reserveringen", "Interactieve kaart", "Activiteitenoverzicht", "Recensiesysteem"],
     completionTime: "24 uur",
     testimonial: {
-      text: "Sinds de lancering van onze nieuwe website zijn onze online boekingen verdubbeld! De website is precies wat we nodig hadden.",
+      text: "Na een aantal nare ervaringen met websitebouwers, hoorde ik via een vriend over Trivi-Turbo. Sinds het eerste contact met Floris had ik al vertrouwen in de samenwerking. We zijn superblij met het eindresultaat, het straalt echt uit wie wij zijn en waar wij voor staan. Bovendien maakt het het voor ouders en jongeren heel gemakkelijk om zichzelf in te lezen en een plekje op kamp te boeken!",
       author: "Emma Visser, Directeur NatuurWonderen",
     },
   },
@@ -99,8 +99,8 @@ const portfolioItems = [
     features: ["Prijsvergelijking", "Kortingscodes", "Productdatabase", "Filteropties"],
     completionTime: "24 uur",
     testimonial: {
-      text: "Trivi-Turbo heeft onze complexe vergelijkingswebsite binnen 24 uur opgeleverd. De site is snel, gebruiksvriendelijk en heeft onze conversies met 45% verhoogd.",
-      author: "Bas Verhoeven, Oprichter GierigGroeien",
+      text: "De mannen van Trivi-Turbo hebben onze complexe vergelijkingswebsite netjes volgens de afgesproken deadlines opgeleverd. Het contact verliep soepel: geen verkooppraatjes, maar wel mooie resultaten. Top!",
+      author: "Timo Blaauw, Oprichter GierigGroeien",
     },
   },
   {
@@ -115,40 +115,23 @@ const portfolioItems = [
     features: ["Interactieve elementen", "Animaties", "Speluitleg", "Online winkel"],
     completionTime: "24 uur",
     testimonial: {
-      text: "De website die Trivi-Turbo heeft gemaakt overtreft al onze verwachtingen. De visuele kwaliteit en interactieve elementen hebben onze spelersbasis aanzienlijk vergroot.",
-      author: "Miguel Fernandez, Game Designer La Subasta de Hashiban",
+      text: "De website die Trivi-Turbo heeft gemaakt, overtreft al onze verwachtingen. De visuele kwaliteit en interactieve elementen zorgen ervoor dat het echt voelt alsof je je waant in de wereld van Hashiban.",
+      author: "Maria Alonso, Game Designer La Subasta de Hashiban",
     },
   },
-]
-
-// Categories for filtering
-const categories = [
-  { id: "all", label: "Alle Projecten" },
-  { id: "e-commerce", label: "E-commerce" },
-  { id: "sport", label: "Sport & Gezondheid" },
-  { id: "automotive", label: "Automotive" },
-  { id: "food", label: "Food & Drank" },
-  { id: "recreation", label: "Recreatie & Toerisme" },
-  { id: "comparison", label: "Vergelijkingswebsites" },
-  { id: "gaming", label: "Gaming & Entertainment" },
-]
+];
 
 export default function PortfolioSection() {
-  const [activeCategory, setActiveCategory] = useState("all")
-  const [currentProject, setCurrentProject] = useState(0)
-
-  const filteredProjects =
-    activeCategory === "all"
-      ? portfolioItems
-      : portfolioItems.filter((item) => item.category.toLowerCase().includes(activeCategory.toLowerCase()))
+  const [activeCategory, setActiveCategory] = useState("all");
+  const [currentProject, setCurrentProject] = useState(0);
 
   const nextProject = () => {
-    setCurrentProject((prev) => (prev === filteredProjects.length - 1 ? 0 : prev + 1))
-  }
+    setCurrentProject((prev) => (prev === portfolioItems.length - 1 ? 0 : prev + 1));
+  };
 
   const prevProject = () => {
-    setCurrentProject((prev) => (prev === 0 ? filteredProjects.length - 1 : prev - 1))
-  }
+    setCurrentProject((prev) => (prev === 0 ? portfolioItems.length - 1 : prev - 1));
+  };
 
   return (
     <section id="portfolio" className="py-24 bg-white">
@@ -161,131 +144,109 @@ export default function PortfolioSection() {
           </p>
         </div>
 
-        <Tabs defaultValue="all" className="mb-12">
-          <div className="flex justify-center mb-8 overflow-x-auto pb-2">
-            <TabsList className="bg-gray-100">
-              {categories.map((category) => (
-                <TabsTrigger
-                  key={category.id}
-                  value={category.id}
-                  onClick={() => {
-                    setActiveCategory(category.id)
-                    setCurrentProject(0)
-                  }}
-                  className="px-4 py-2 data-[state=active]:bg-[#072ac8] data-[state=active]:text-white whitespace-nowrap"
-                >
-                  {category.label}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-          </div>
-
-          <TabsContent value={activeCategory} className="mt-0">
-            {filteredProjects.length > 0 ? (
-              <div className="relative">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                  {/* Project Image */}
-                  <div className="relative overflow-hidden rounded-xl shadow-2xl">
-                    <div className="aspect-[16/9] relative">
-                      <Image
-                        src={filteredProjects[currentProject].image || "/placeholder.svg"}
-                        alt={filteredProjects[currentProject].title}
-                        fill
-                        className="object-cover"
-                      />
+        {portfolioItems.length > 0 ? (
+          <div className="relative">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              {/* Project Image */}
+              <div className="relative overflow-hidden rounded-xl shadow-2xl">
+                <div className="aspect-[16/9] relative">
+                  <Image
+                    src={portfolioItems[currentProject].image || "/placeholder.svg"}
+                    alt={portfolioItems[currentProject].title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                  <div className="flex items-center text-white">
+                    <div className="flex mr-2">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-5 w-5 text-[#ffc600] fill-current" />
+                      ))}
                     </div>
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                      <div className="flex items-center text-white">
-                        <div className="flex mr-2">
-                          {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="h-5 w-5 text-[#ffc600] fill-current" />
-                          ))}
-                        </div>
-                        <span className="text-sm">5.0/5.0</span>
-                      </div>
-                    </div>
+                    <span className="text-sm">5.0/5.0</span>
                   </div>
+                </div>
+              </div>
 
-                  {/* Project Details */}
-                  <div className="lg:pl-8">
-                    <h3 className="text-3xl font-bold text-gray-900 mb-3">{filteredProjects[currentProject].title}</h3>
-                    <Badge className="mb-4 bg-[#072ac8] text-white">{filteredProjects[currentProject].category}</Badge>
-                    <p className="text-gray-600 mb-6">{filteredProjects[currentProject].description}</p>
+              {/* Project Details */}
+              <div className="lg:pl-8">
+                <h3 className="text-3xl font-bold text-gray-900 mb-3">{portfolioItems[currentProject].title}</h3>
+                <Badge className="mb-4 bg-[#072ac8] text-white">{portfolioItems[currentProject].category}</Badge>
+                <p className="text-gray-600 mb-6">{portfolioItems[currentProject].description}</p>
 
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">Tags:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {filteredProjects[currentProject].tags.map((tag, index) => (
-                          <Badge key={index} variant="outline" className="border-[#1e96fc] text-[#1e96fc]">
-                            {tag}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">Kenmerken:</h4>
-                      <ul className="grid grid-cols-2 gap-2">
-                        {filteredProjects[currentProject].features.map((feature, index) => (
-                          <li key={index} className="flex items-center">
-                            <div className="h-5 w-5 rounded-full bg-[#a2d6f9] flex items-center justify-center mr-2">
-                              <Check className="h-3 w-3 text-[#072ac8]" />
-                            </div>
-                            <span className="text-gray-700 text-sm">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="mb-6 p-4 bg-gray-50 rounded-lg border border-gray-100">
-                      <p className="text-gray-600 italic mb-2">
-                        &ldquo;{filteredProjects[currentProject].testimonial.text}&rdquo;
-                      </p>
-                      <p className="text-gray-900 font-medium text-sm">
-                        — {filteredProjects[currentProject].testimonial.author}
-                      </p>
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center text-[#072ac8]">
-                        <Clock className="h-5 w-5 mr-2" />
-                        <span>Geleverd in {filteredProjects[currentProject].completionTime}</span>
-                      </div>
-                      <Button className="bg-[#072ac8] hover:bg-[#1e96fc]">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Bekijk Live
-                      </Button>
-                    </div>
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-2">Tags:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {portfolioItems[currentProject].tags.map((tag, index) => (
+                      <Badge key={index} variant="outline" className="border-[#1e96fc] text-[#1e96fc]">
+                        {tag}
+                      </Badge>
+                    ))}
                   </div>
                 </div>
 
-                {/* Navigation buttons */}
-                {filteredProjects.length > 1 && (
-                  <>
-                    <button
-                      onClick={prevProject}
-                      className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg z-10 lg:-left-5"
-                      aria-label="Vorige project"
-                    >
-                      <ChevronLeft className="h-6 w-6 text-gray-700" />
-                    </button>
-                    <button
-                      onClick={nextProject}
-                      className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg z-10 lg:-right-5"
-                      aria-label="Volgende project"
-                    >
-                      <ChevronRight className="h-6 w-6 text-gray-700" />
-                    </button>
-                  </>
-                )}
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-2">Kenmerken:</h4>
+                  <ul className="grid grid-cols-2 gap-2">
+                    {portfolioItems[currentProject].features.map((feature, index) => (
+                      <li key={index} className="flex items-center">
+                        <div className="h-5 w-5 rounded-full bg-[#a2d6f9] flex items-center justify-center mr-2">
+                          <Check className="h-3 w-3 text-[#072ac8]" />
+                        </div>
+                        <span className="text-gray-700 text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mb-6 p-4 bg-gray-50 rounded-lg border border-gray-100">
+                  <p className="text-gray-600 italic mb-2">
+                    &ldquo;{portfolioItems[currentProject].testimonial.text}&rdquo;
+                  </p>
+                  <p className="text-gray-900 font-medium text-sm">
+                    — {portfolioItems[currentProject].testimonial.author}
+                  </p>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center text-[#072ac8]">
+                    <Clock className="h-5 w-5 mr-2" />
+                    <span>Geleverd in {portfolioItems[currentProject].completionTime}</span>
+                  </div>
+                  {/* <Button className="bg-[#072ac8] hover:bg-[#1e96fc]">
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    Bekijk Live
+                  </Button> */}
+                </div>
               </div>
-            ) : (
-              <div className="text-center py-12">
-                <p className="text-gray-500">Geen projecten gevonden in deze categorie.</p>
-              </div>
+            </div>
+
+            {/* Navigation buttons */}
+            {portfolioItems.length > 1 && (
+              <>
+                <button
+                  onClick={prevProject}
+                  className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg z-10 lg:-left-5"
+                  aria-label="Vorige project"
+                >
+                  <ChevronLeft className="h-6 w-6 text-gray-700" />
+                </button>
+                <button
+                  onClick={nextProject}
+                  className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg z-10 lg:-right-5"
+                  aria-label="Volgende project"
+                >
+                  <ChevronRight className="h-6 w-6 text-gray-700" />
+                </button>
+              </>
             )}
-          </TabsContent>
-        </Tabs>
+          </div>
+        ) : (
+          <div className="text-center py-12">
+            <p className="text-gray-500">Geen projecten gevonden in deze categorie.</p>
+          </div>
+        )}
 
         {/* Project thumbnails */}
         <div className="mt-12">
@@ -298,8 +259,8 @@ export default function PortfolioSection() {
                   currentProject === index && activeCategory === "all" ? "ring-2 ring-[#072ac8]" : ""
                 }`}
                 onClick={() => {
-                  setActiveCategory("all")
-                  setCurrentProject(index)
+                  setActiveCategory("all");
+                  setCurrentProject(index);
                 }}
               >
                 <CardContent className="p-0">
@@ -327,11 +288,13 @@ export default function PortfolioSection() {
 
         <div className="mt-16 text-center">
           <p className="text-gray-600 mb-6">Klaar om uw eigen website te laten maken?</p>
-          <Button className="bg-[#072ac8] hover:bg-[#1e96fc] text-white px-8 py-6 text-lg">Start Uw Project</Button>
+          <Button className="bg-[#072ac8] hover:bg-[#1e96fc] text-white px-8 py-6 text-lg" asChild>
+            <Link href="#contact">Start uw project</Link>
+          </Button>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 // Helper component for check icon
@@ -351,7 +314,7 @@ function Check(props: React.SVGProps<SVGSVGElement>) {
     >
       <polyline points="20 6 9 17 4 12" />
     </svg>
-  )
+  );
 }
 
 // Helper component for clock icon
@@ -372,5 +335,5 @@ function Clock(props: React.SVGProps<SVGSVGElement>) {
       <circle cx="12" cy="12" r="10" />
       <polyline points="12 6 12 12 16 14" />
     </svg>
-  )
+  );
 }

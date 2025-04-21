@@ -5,7 +5,7 @@ export default function ProcessSection() {
     {
       icon: <Phone className="h-10 w-10 text-white" />,
       title: "Contact",
-      description: "U neemt contact met ons op, geen compromissen.",
+      description: "U neemt contact met ons op.",
       color: "bg-[#072ac8]",
     },
     {

@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, MapPin, Send } from "lucide-react"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -14,20 +14,20 @@ export default function ContactSection() {
     email: "",
     phone: "",
     message: "",
-  })
+  });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData)
-    alert("Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.")
-    setFormData({ name: "", email: "", phone: "", message: "" })
-  }
+    console.log("Form submitted:", formData);
+    alert("Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.");
+    setFormData({ name: "", email: "", phone: "", message: "" });
+  };
 
   return (
     <section id="contact" className="py-20 bg-white">
@@ -48,7 +48,7 @@ export default function ContactSection() {
                 <Mail className="h-6 w-6 mr-4 mt-1" />
                 <div>
                   <h4 className="font-semibold mb-1">E-mail</h4>
-                  <p>info@trivi-turbo.nl</p>
+                  <p>info@triviturbo.nl</p>
                 </div>
               </div>
 
@@ -56,21 +56,7 @@ export default function ContactSection() {
                 <Phone className="h-6 w-6 mr-4 mt-1" />
                 <div>
                   <h4 className="font-semibold mb-1">Telefoon</h4>
-                  <p>+31 6 12345678</p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <MapPin className="h-6 w-6 mr-4 mt-1" />
-                <div>
-                  <h4 className="font-semibold mb-1">Adres</h4>
-                  <p>
-                    Webstraat 123
-                    <br />
-                    1234 AB Amsterdam
-                    <br />
-                    Nederland
-                  </p>
+                  <p>+31 6 310 85 254</p>
                 </div>
               </div>
             </div>
@@ -143,5 +129,5 @@ export default function ContactSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

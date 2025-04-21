@@ -64,7 +64,7 @@ export default function HeroDesignPage({ params }: { params: { id: string } }) {
               <span className="bg-[#072ac8] text-white px-3 py-1 rounded-full text-sm">{design.style}</span>
               <span className="bg-[#1e96fc] text-white px-3 py-1 rounded-full text-sm">Hero Section</span>
               <span className="bg-[#a2d6f9] text-[#072ac8] px-3 py-1 rounded-full text-sm">Web Design</span>
-              <span className="bg-[#ffc600] text-[#072ac8] px-3 py-1 rounded-full text-sm">Trivi-Turbo</span>
+              <span className="bg-[#ffc600] text-[#072ac8] px-3 py-1 rounded-full text-sm">TriviTurbo</span>
             </div>
           </div>
 
@@ -77,7 +77,7 @@ export default function HeroDesignPage({ params }: { params: { id: string } }) {
               </div>
               <div>
                 <span className="text-gray-500 block">Kleurenpalet:</span>
-                <span className="font-medium">Trivi-Turbo Huisstijl</span>
+                <span className="font-medium">TriviTurbo Huisstijl</span>
               </div>
               <div>
                 <span className="text-gray-500 block">Geschikt voor:</span>

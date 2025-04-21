@@ -5,24 +5,21 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 })
 
-// Comprehensive information about the website content
 const pageContent = {
   companyInfo: {
-    name: "Trivi-Turbo",
+    name: "TriviTurbo",
     tagline: "Uw Website Binnen 24 Uur Voor Slechts €300",
     description:
       "Wij bouwen snelle en betaalbare websites met behulp van de nieuwste AI-technologieën. Krijg uw website binnen 24 uur voor slechts €300.",
     uniqueSellingPoints: [
-      "Snelle levering binnen 24 uur",
       "Betaalbare prijzen vanaf €300",
       "Gebruik van de nieuwste AI-technologieën",
       "Professionele en responsieve designs",
       "SEO geoptimaliseerd",
     ],
     contactInfo: {
-      email: "info@trivi-turbo.nl",
-      phone: "+31 6 12345678",
-      address: "Webstraat 123, 1234 AB Amsterdam, Nederland",
+      email: "info@triviturbo.nl",
+      phone: "+31 6 310 85 254",
       workingHours: "Maandag - Vrijdag: 9:00 - 18:00, Weekend: Gesloten",
     },
   },
@@ -30,11 +27,11 @@ const pageContent = {
   services: {
     packages: [
       {
-        name: "One Pager",
+        name: "Onepager",
         price: "€300",
         description: "Perfect voor starters",
         features: [
-          "Professionele one-page website",
+          "Professionele onepage website",
           "Contactformulier inbegrepen",
           "Wij beheren uw hosting en domein",
           "Social media integratie",
@@ -49,13 +46,9 @@ const pageContent = {
         price: "€450",
         description: "Voor groeiende bedrijven",
         features: [
-          "Alles van het One Pager pakket",
+          "Alles van het Onepager pakket",
           "Professionele blog pagina",
           "Content Management Systeem",
-          "3 startartikelen voor uw blog",
-          "Geavanceerde SEO optimalisatie",
-          "Levering binnen 24 uur",
-          "Prioriteit ondersteuning",
         ],
         bestFor: "Groeiende bedrijven, content creators, bedrijven die regelmatig updates delen",
       },
@@ -69,7 +62,6 @@ const pageContent = {
           "Getraind op uw bedrijfsgegevens",
           "24/7 klantenservice automatisering",
           "Leadgeneratie en kwalificatie",
-          "Maandelijkse chatbot updates",
           "Gedetailleerde analytics dashboard",
         ],
         bestFor: "Innovatieve bedrijven, e-commerce, bedrijven met veel klantenservice vragen",
@@ -81,7 +73,7 @@ const pageContent = {
     steps: [
       {
         title: "Contact",
-        description: "U neemt contact met ons op, geen compromissen.",
+        description: "U neemt contact met ons op.",
       },
       {
         title: "Behoeften",
@@ -118,7 +110,7 @@ const pageContent = {
         description:
           "Een platform voor jeugdteams dat mentale gezondheid, motivatie en teambeheer op één plek samenbrengt.",
         testimonial:
-          "Trivi-Turbo heeft onze visie perfect vertaald naar een gebruiksvriendelijk platform. De snelheid waarmee ze hebben geleverd was indrukwekkend!",
+          "TriviTurbo heeft onze visie perfect vertaald naar een gebruiksvriendelijk platform. De snelheid waarmee ze hebben geleverd was indrukwekkend!",
       },
       {
         title: "Trendy Meubels",
@@ -134,7 +126,7 @@ const pageContent = {
         description:
           "De toonaangevende supplementenvergelijker van Nederland. Een gebruiksvriendelijke website die consumenten helpt de beste deals te vinden.",
         testimonial:
-          "Trivi-Turbo heeft onze complexe vergelijkingswebsite binnen 24 uur opgeleverd. De site is snel, gebruiksvriendelijk en heeft onze conversies met 45% verhoogd.",
+          "TriviTurbo heeft onze complexe vergelijkingswebsite binnen 24 uur opgeleverd. De site is snel, gebruiksvriendelijk en heeft onze conversies met 45% verhoogd.",
       },
     ],
   },
@@ -147,19 +139,19 @@ const pageContent = {
         name: "Martijn de Vries",
         company: "Bloemen & Zo",
         rating: 5,
-        text: "Trivi-Turbo heeft onze website binnen 24 uur opgeleverd, precies zoals beloofd! De kwaliteit is uitstekend en onze online verkopen zijn sindsdien met 40% gestegen. Absoluut de beste investering die we hebben gedaan.",
+        text: "TriviTurbo heeft onze website binnen 24 uur opgeleverd, precies zoals beloofd! De kwaliteit is uitstekend en onze online verkopen zijn sindsdien met 40% gestegen. Absoluut de beste investering die we hebben gedaan.",
       },
       {
         name: "Sophie Jansen",
         company: "Jansen Consultancy",
         rating: 5,
-        text: "Ik was sceptisch over een website die zo snel gebouwd kon worden, maar Trivi-Turbo heeft me omver geblazen. De website ziet er professioneel uit, laadt razendsnel en heeft alle functionaliteiten die ik nodig heb. Geweldig werk!",
+        text: "Ik was sceptisch over een website die zo snel gebouwd kon worden, maar TriviTurbo heeft me omver geblazen. De website ziet er professioneel uit, laadt razendsnel en heeft alle functionaliteiten die ik nodig heb. Geweldig werk!",
       },
       {
         name: "Thomas Bakker",
         company: "Bakker's Patisserie",
         rating: 4.5,
-        text: "Onze bakkerij had dringend een nieuwe website nodig en Trivi-Turbo heeft dit perfect opgelost. De website werd binnen een dag opgeleverd en ziet er prachtig uit. Onze klanten zijn enthousiast en kunnen nu eenvoudig online bestellingen plaatsen.",
+        text: "Onze bakkerij had dringend een nieuwe website nodig en TriviTurbo heeft dit perfect opgelost. De website werd binnen een dag opgeleverd en ziet er prachtig uit. Onze klanten zijn enthousiast en kunnen nu eenvoudig online bestellingen plaatsen.",
       },
     ],
   },
@@ -184,9 +176,9 @@ const pageContent = {
         "Wij maken gebruik van de nieuwste AI-technologieën en hebben een gestroomlijnd proces ontwikkeld dat ons in staat stelt om snel hoogwaardige websites te bouwen. We werken met vooraf ontwikkelde componenten die we aanpassen aan uw wensen en huisstijl.",
     },
     {
-      question: "Wat is inbegrepen in de prijs van €300 voor een One Pager?",
+      question: "Wat is inbegrepen in de prijs van €300 voor een Onepager?",
       answer:
-        "Voor €300 krijgt u een professionele one-page website met contactformulier, social media integratie, SEO optimalisatie, responsive design, en wij beheren uw hosting en domein. De website wordt binnen 24 uur opgeleverd.",
+        "Voor €300 krijgt u een professionele onepage website met contactformulier, social media integratie, SEO optimalisatie, responsive design, en wij beheren uw hosting en domein. De website wordt binnen 24 uur opgeleverd.",
     },
     {
       question: "Kan ik later upgraden naar een uitgebreider pakket?",
@@ -224,15 +216,15 @@ export async function POST(req: Request) {
 
     const systemMessage = {
       role: "system",
-      content: `Je bent Turbino, de AI assistent voor Trivi-Turbo, een bedrijf dat binnen 24 uur professionele websites bouwt voor slechts €300.
+      content: `Je bent Turbino, de AI assistent voor TriviTurbo, een bedrijf dat binnen 24 uur professionele websites bouwt voor slechts €300.
 
-      Hier is uitgebreide informatie over Trivi-Turbo die je kunt gebruiken om vragen te beantwoorden:
+      Hier is uitgebreide informatie over TriviTurbo die je kunt gebruiken om vragen te beantwoorden:
       ${JSON.stringify(pageContent, null, 2)}
       
       Richtlijnen voor het beantwoorden van vragen:
       
       1. PRIJZEN EN PAKKETTEN:
-         - Als gebruikers vragen naar prijzen, leg de drie pakketten uit: One Pager (€300), Website + Blog (€450), en AI Chatbot (€750).
+         - Als gebruikers vragen naar prijzen, leg de drie pakketten uit: Onepager (€300), Website + Blog (€450), en AI Chatbot (€750).
          - Benadruk altijd de snelle levering binnen 24 uur en de hoge kwaliteit.
          - Adviseer het juiste pakket op basis van de behoeften van de gebruiker.
       
@@ -249,7 +241,7 @@ export async function POST(req: Request) {
          - Bijvoorbeeld: "U kunt meer informatie vinden in de Diensten sectie (#diensten) op onze website."
       
       5. CONTACT:
-         - Moedig gebruikers aan contact op te nemen via het contactformulier, e-mail (info@trivi-turbo.nl) of telefoon (+31 6 12345678).
+         - Moedig gebruikers aan contact op te nemen via het contactformulier, e-mail (info@triviturbo.nl) of telefoon (+31 6 310 85 254).
          - Vermeld onze werkuren: Maandag - Vrijdag: 9:00 - 18:00, Weekend: Gesloten.
       
       6. LEUKE FEATURES:

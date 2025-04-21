@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
+import Link from "next/link";
+import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <h2 className="text-2xl font-bold mb-4">Trivi-Turbo</h2>
+            <h2 className="text-2xl font-bold mb-4">TriviTurbo</h2>
             <p className="text-gray-400 mb-4 max-w-md">
               Wij bouwen snelle en betaalbare websites met behulp van de nieuwste AI-technologieën. Krijg uw website
               binnen 24 uur voor slechts €300.
@@ -45,11 +45,7 @@ export default function Footer() {
                   Diensten
                 </Link>
               </li>
-              <li>
-                <Link href="#over-ons" className="text-gray-400 hover:text-white">
-                  Over Ons
-                </Link>
-              </li>
+           
               <li>
                 <Link href="#proces" className="text-gray-400 hover:text-white">
                   Proces
@@ -66,19 +62,17 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>info@trivi-turbo.nl</li>
-              <li>+31 6 12345678</li>
-              <li>Webstraat 123</li>
-              <li>1234 AB Amsterdam</li>
+              <li>info@triviturbo.nl</li>
+              <li>+31 6 310 85 254</li>
               <li>Nederland</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Trivi-Turbo. Alle rechten voorbehouden.</p>
+          <p>&copy; {new Date().getFullYear()} TriviTurbo. Alle rechten voorbehouden.</p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

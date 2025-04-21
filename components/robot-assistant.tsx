@@ -4,7 +4,7 @@ import type React from "react";
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Loader2, BotIcon as Robot } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import Image from "next/image";
 
 interface ChatMessage {
@@ -16,7 +16,7 @@ export default function RobotAssistant() {
   const [isMinimized, setIsMinimized] = useState(true);
   const [chatHistory, setChatHistory] = useState<ChatMessage[]>([
     {
-      text: "Hallo! Ik ben Turbino, uw persoonlijke assistent van Trivi-Turbo. Hoe kan ik u vandaag helpen met uw website wensen?",
+      text: "Hallo! Ik ben Turbino, uw persoonlijke assistent van TriviTurbo. Hoe kan ik u vandaag helpen met uw website wensen?",
       isUser: false,
     },
   ]);
@@ -108,7 +108,7 @@ export default function RobotAssistant() {
                 </div>
                 <div>
                   <div className="text-sm text-white font-bold">Turbino</div>
-                  <div className="text-xs text-white/80">Trivi-Turbo Assistent</div>
+                  <div className="text-xs text-white/80">TriviTurbo Assistent</div>
                 </div>
               </div>
               <div className="flex space-x-2">
@@ -216,7 +216,7 @@ export default function RobotAssistant() {
                 <p className="text-xs text-gray-500">
                   Powered by{" "}
                   <span className="font-semibold bg-gradient-to-r from-[#072ac8] to-[#1e96fc] bg-clip-text text-transparent">
-                    Trivi-Turbo
+                    TriviTurbo
                   </span>{" "}
                   AI
                 </p>
@@ -235,7 +235,7 @@ export default function RobotAssistant() {
             aria-label="Open chat assistent"
           >
             <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-              <Robot className="w-6 h-6 text-white" />
+              <Image src="/turbino.png" alt="Turbino" width={40} height={40} className="rounded-full animate-bounce" />
             </div>
           </motion.button>
         )}

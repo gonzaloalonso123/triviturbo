@@ -27,16 +27,16 @@ export default function Navbar() {
               Diensten
             </Link>
             <Link
-              href="#over-ons"
-              className="text-gray-700 hover:text-[#1e96fc] px-3 py-2 rounded-md text-sm font-medium"
-            >
-              Over Ons
-            </Link>
-            <Link
               href="#proces"
               className="text-gray-700 hover:text-[#1e96fc] px-3 py-2 rounded-md text-sm font-medium"
             >
               Proces
+            </Link>
+            <Link
+              href="#portfolio"
+              className="text-gray-700 hover:text-[#1e96fc] px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Portfolio
             </Link>
             <Link
               href="#contact"
@@ -44,7 +44,9 @@ export default function Navbar() {
             >
               Contact
             </Link>
-            <Button className="bg-[#072ac8] hover:bg-[#1e96fc] text-white">Start Nu</Button>
+            <Button asChild className="bg-[#072ac8] hover:bg-[#1e96fc] text-white">
+              <Link href="#contact">Turbo Start</Link>
+            </Button>
           </div>
           <div className="md:hidden flex items-center">
             <button
@@ -67,16 +69,16 @@ export default function Navbar() {
               Diensten
             </Link>
             <Link
-              href="#over-ons"
-              className="text-gray-700 hover:text-[#1e96fc] block px-3 py-2 rounded-md text-base font-medium"
-            >
-              Over Ons
-            </Link>
-            <Link
               href="#proces"
               className="text-gray-700 hover:text-[#1e96fc] block px-3 py-2 rounded-md text-base font-medium"
             >
               Proces
+            </Link>
+            <Link
+              href="#portfolio"
+              className="text-gray-700 hover:text-[#1e96fc] block px-3 py-2 rounded-md text-base font-medium"
+            >
+              Portfolio
             </Link>
             <Link
               href="#contact"
@@ -84,7 +86,9 @@ export default function Navbar() {
             >
               Contact
             </Link>
-            <Button className="w-full bg-[#072ac8] hover:bg-[#1e96fc] text-white mt-2">Start Nu</Button>
+            <Button className="w-full bg-[#072ac8] hover:bg-[#1e96fc] text-white mt-2">
+              <Link href="#contact">Turbo Start</Link>
+            </Button>
           </div>
         </div>
       )}

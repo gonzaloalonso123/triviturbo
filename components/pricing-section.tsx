@@ -1,6 +1,7 @@
 import { Check, Sparkles, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
 export default function PricingSection() {
   return (
@@ -15,12 +16,11 @@ export default function PricingSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
-          {/* Offer 1: One Pager */}
           <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-xl hover:translate-y-[-4px]">
             <div className="p-6 lg:p-8">
               <div className="flex justify-between items-start mb-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900">One Pager</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">Onepager</h3>
                   <p className="text-gray-500 mt-1">Perfect voor starters</p>
                 </div>
                 <Badge variant="outline" className="border-[#072ac8] text-[#072ac8]">
@@ -33,14 +33,16 @@ export default function PricingSection() {
                 <span className="text-gray-500 ml-2">eenmalig</span>
               </div>
 
-              <Button className="w-full bg-[#072ac8] hover:bg-[#1e96fc] text-white py-6 mb-8">Kies dit pakket</Button>
+              <Button className="w-full bg-[#072ac8] hover:bg-[#1e96fc] text-white py-6 mb-8" asChild>
+                <Link href="#contact">Kies dit pakket</Link>
+              </Button>
 
               <div className="space-y-4">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#a2d6f9] flex items-center justify-center mt-0.5">
                     <Check className="h-4 w-4 text-[#072ac8]" />
                   </div>
-                  <span className="ml-3 text-gray-700">Professionele one-page website</span>
+                  <span className="ml-3 text-gray-700">Professionele onepage website</span>
                 </div>
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#a2d6f9] flex items-center justify-center mt-0.5">
@@ -82,7 +84,6 @@ export default function PricingSection() {
             </div>
           </div>
 
-          {/* Offer 2: Website with Blog */}
           <div className="bg-gradient-to-br from-[#072ac8] to-[#1e96fc] rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:translate-y-[-4px]">
             <div className="p-6 lg:p-8">
               <div className="flex justify-between items-start mb-6">
@@ -98,14 +99,16 @@ export default function PricingSection() {
                 <span className="text-white/80 ml-2">eenmalig</span>
               </div>
 
-              <Button className="w-full bg-white hover:bg-gray-100 text-[#072ac8] py-6 mb-8">Kies dit pakket</Button>
+              <Button className="w-full bg-white hover:bg-gray-100 text-[#072ac8] py-6 mb-8" asChild>
+                <Link href="#contact">Kies dit pakket</Link>
+              </Button>
 
               <div className="space-y-4">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-6 w-6 rounded-full bg-white flex items-center justify-center mt-0.5">
                     <Check className="h-4 w-4 text-[#072ac8]" />
                   </div>
-                  <span className="ml-3 text-white">Alles van het One Pager pakket</span>
+                  <span className="ml-3 text-white">Alles van het Onepager pakket</span>
                 </div>
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-6 w-6 rounded-full bg-white flex items-center justify-center mt-0.5">
@@ -118,30 +121,6 @@ export default function PricingSection() {
                     <Check className="h-4 w-4 text-[#072ac8]" />
                   </div>
                   <span className="ml-3 text-white">Content Management Systeem</span>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-white flex items-center justify-center mt-0.5">
-                    <Check className="h-4 w-4 text-[#072ac8]" />
-                  </div>
-                  <span className="ml-3 text-white">3 startartikelen voor uw blog</span>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-white flex items-center justify-center mt-0.5">
-                    <Check className="h-4 w-4 text-[#072ac8]" />
-                  </div>
-                  <span className="ml-3 text-white">Geavanceerde SEO optimalisatie</span>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-white flex items-center justify-center mt-0.5">
-                    <Check className="h-4 w-4 text-[#072ac8]" />
-                  </div>
-                  <span className="ml-3 text-white">Levering binnen 24 uur</span>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-white flex items-center justify-center mt-0.5">
-                    <Check className="h-4 w-4 text-[#072ac8]" />
-                  </div>
-                  <span className="ml-3 text-white">Prioriteit ondersteuning</span>
                 </div>
               </div>
             </div>
@@ -165,7 +144,9 @@ export default function PricingSection() {
                 <span className="text-gray-700 ml-2">eenmalig</span>
               </div>
 
-              <Button className="w-full bg-[#072ac8] hover:bg-[#1e96fc] text-white py-6 mb-8">Kies dit pakket</Button>
+              <Button className="w-full bg-[#072ac8] hover:bg-[#1e96fc] text-white py-6 mb-8" asChild>
+                <Link href="#contact">Kies dit pakket</Link>
+              </Button>
 
               <div className="space-y-4">
                 <div className="flex items-start">
@@ -196,18 +177,6 @@ export default function PricingSection() {
                   <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#072ac8] flex items-center justify-center mt-0.5">
                     <Check className="h-4 w-4 text-[#fcf300]" />
                   </div>
-                  <span className="ml-3 text-gray-800">Leadgeneratie en kwalificatie</span>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#072ac8] flex items-center justify-center mt-0.5">
-                    <Check className="h-4 w-4 text-[#fcf300]" />
-                  </div>
-                  <span className="ml-3 text-gray-800">Maandelijkse chatbot updates</span>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#072ac8] flex items-center justify-center mt-0.5">
-                    <Check className="h-4 w-4 text-[#fcf300]" />
-                  </div>
                   <span className="ml-3 text-gray-800">Gedetailleerde analytics dashboard</span>
                 </div>
               </div>
@@ -217,8 +186,12 @@ export default function PricingSection() {
 
         <div className="mt-16 text-center">
           <p className="text-gray-600 mb-6">Niet zeker welk pakket bij u past? Neem contact met ons op voor advies.</p>
-          <Button variant="outline" className="border-[#072ac8] text-[#072ac8] hover:bg-[#072ac8] hover:text-white">
-            Vraag een offerte aan
+          <Button
+            variant="outline"
+            className="border-[#072ac8] text-[#072ac8] hover:bg-[#072ac8] hover:text-white"
+            asChild
+          >
+            <Link href="#contact">Even sparren?</Link>
           </Button>
         </div>
       </div>
