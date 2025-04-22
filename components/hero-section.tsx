@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import HeroGrid from "@/components/hero-grid";
 import TeamImageReveal from "@/components/team-image-reveal";
 import Link from "next/link";
+import { Star } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -29,6 +30,19 @@ export default function HeroSection() {
               <Button className="bg-[#072ac8] hover:bg-[#1e96fc] text-white font-bold text-lg px-8 py-6" asChild>
                 <Link href="#contact">Even contact?</Link>
               </Button>
+            </div>
+
+            <div className="mt-12">
+              <div className="inline-flex items-center bg-white/40 px-6 py-3 rounded-full shadow-md">
+                <div className="flex mr-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-[#ffc600] fill-current" />
+                  ))}
+                </div>
+                <span className="font-bold">5.0/5</span>
+                <span className="mx-2 text-gray-400">|</span>
+                <span className="text-gray-600 text-sm">Gebaseerd op {7} beoordelingen</span>
+              </div>
             </div>
           </div>
 

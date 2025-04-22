@@ -108,8 +108,8 @@ export default function ReviewsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {displayedReviews.map((review) => (
             <Card key={review.id} className="overflow-hidden border-none shadow-lg">
-              <CardContent className="p-0">
-                <div className="bg-gradient-to-r from-[#072ac8]/10 to-[#1e96fc]/10 p-6 md:p-8">
+              <CardContent className="p-0 h-full">
+                <div className="bg-gradient-to-r h-full from-[#072ac8]/10 to-[#1e96fc]/10 p-6 md:p-8">
                   <div className="flex items-center mb-4">
                     <div>
                       <h3 className="font-bold text-lg">{review.name}</h3>
