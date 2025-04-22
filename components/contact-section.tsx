@@ -2,11 +2,12 @@
 
 import type React from "react";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, Send, Loader2, CheckCircle } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -15,18 +16,45 @@ export default function ContactSection() {
     phone: "",
     message: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData);
-    alert("Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.");
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setIsLoading(true);
+    
+    try {
+      const serviceId = 'service_u6x2do2';
+      const templateId = 'template_twm96wa';
+      const publicKey = 'X_Bjt6rbE59Sd-EVk';
+      
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          to_email: 'info@triviturbo.nl',
+        },
+        publicKey
+      );
+      
+      setIsSuccess(true);
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      alert('Er is iets misgegaan bij het versturen van uw bericht. Probeer het later opnieuw.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -69,62 +97,101 @@ export default function ContactSection() {
           </div>
 
           <div>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                  Naam
-                </label>
-                <Input
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full"
-                />
+            {isSuccess ? (
+              <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
+                <CheckCircle className="h-16 w-16 mx-auto text-green-500 mb-4" />
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Bericht Ontvangen!</h3>
+                <p className="text-gray-600 mb-6">
+                  Bedankt voor uw bericht. We hebben uw aanvraag ontvangen en zullen zo snel mogelijk contact met u opnemen.
+                </p>
+                <Button 
+                  onClick={() => setIsSuccess(false)} 
+                  className="bg-[#072ac8] hover:bg-[#1e96fc] text-white"
+                >
+                  Nieuw Bericht
+                </Button>
               </div>
+            ) : (
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                    Naam
+                  </label>
+                  <Input
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full"
+                    disabled={isLoading}
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                  E-mail
-                </label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full"
-                />
-              </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                    E-mail
+                  </label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full"
+                    disabled={isLoading}
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                  Telefoonnummer
-                </label>
-                <Input id="phone" name="phone" value={formData.phone} onChange={handleChange} className="w-full" />
-              </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                    Telefoonnummer
+                  </label>
+                  <Input 
+                    id="phone" 
+                    name="phone" 
+                    value={formData.phone} 
+                    onChange={handleChange} 
+                    className="w-full" 
+                    disabled={isLoading}
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                  Bericht
-                </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  className="w-full min-h-[150px]"
-                />
-              </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                    Bericht
+                  </label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    className="w-full min-h-[150px]"
+                    disabled={isLoading}
+                  />
+                </div>
 
-              <Button type="submit" className="w-full bg-[#072ac8] hover:bg-[#1e96fc] text-white">
-                <Send className="h-4 w-4 mr-2" />
-                Verstuur Bericht
-              </Button>
-            </form>
+                <Button 
+                  type="submit" 
+                  className="w-full bg-[#072ac8] hover:bg-[#1e96fc] text-white"
+                  disabled={isLoading}
+                >
+                  {isLoading ? (
+                    <>
+                      <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                      Versturen...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="h-4 w-4 mr-2" />
+                      Verstuur Bericht
+                    </>
+                  )}
+                </Button>
+              </form>
+            )}
           </div>
         </div>
       </div>
