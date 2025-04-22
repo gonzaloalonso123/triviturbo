@@ -44,7 +44,7 @@ const portfolioItems = [
   },
   {
     id: 3,
-    title: "Auto Showcase",
+    title: "Motor Gein",
     category: "Automotive",
     description:
       "Een premium website voor het showcasen van luxe auto's met gedetailleerde productpagina's en een strak design. Gebouwd met Vue.js.",
@@ -54,7 +54,7 @@ const portfolioItems = [
     completionTime: "24 uur",
     testimonial: {
       text: "De samenwerking met TriviTurbo verliep vlekkeloos. Ze hebben een website opgeleverd die precies de premium uitstraling heeft waar we naar op zoek waren. We zijn vooral onder de indruk van het gebruiksgemak en het strakke design.",
-      author: "Mark de Vries, Marketing Manager Auto Showcase",
+      author: "Dennis van Leeuwen, Marketing Manager Motor Gein",
     },
   },
   {
@@ -69,7 +69,7 @@ const portfolioItems = [
     completionTime: "24 uur",
     testimonial: {
       text: "Na een leuk gesprek met Floris te hebben gehad, hebben wij onze content aangeleverd. De volgende dag stond onze site al online. Super snel en precies zoals we het voor ogen hadden. Proost, jongens!",
-      author: "Joris Bakker, Hoofdbrouwer Wolf Brew",
+      author: "Maarten Blom, Hoofdbrouwer Wolf Brew",
     },
   },
   {
@@ -85,7 +85,7 @@ const portfolioItems = [
     completionTime: "24 uur",
     testimonial: {
       text: "Na een aantal nare ervaringen met websitebouwers, hoorde ik via een vriend over TriviTurbo. Sinds het eerste contact met Floris had ik al vertrouwen in de samenwerking. We zijn superblij met het eindresultaat, het straalt echt uit wie wij zijn en waar wij voor staan. Bovendien maakt het het voor ouders en jongeren heel gemakkelijk om zichzelf in te lezen en een plekje op kamp te boeken!",
-      author: "Emma Visser, Directeur NatuurWonderen",
+      author: "Eva Kuiper, Directeur NatuurWonderen",
     },
   },
   {
@@ -227,14 +227,14 @@ export default function PortfolioSection() {
               <>
                 <button
                   onClick={prevProject}
-                  className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg z-10 lg:-left-5"
+                  className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-[#a2d6f9]/80 hover:bg-white rounded-full p-2 shadow-lg z-10 lg:-left-5"
                   aria-label="Vorige project"
                 >
                   <ChevronLeft className="h-6 w-6 text-gray-700" />
                 </button>
                 <button
                   onClick={nextProject}
-                  className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg z-10 lg:-right-5"
+                  className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-[#a2d6f9]/80 hover:bg-white rounded-full p-2 shadow-lg z-10 lg:-right-5"
                   aria-label="Volgende project"
                 >
                   <ChevronRight className="h-6 w-6 text-gray-700" />

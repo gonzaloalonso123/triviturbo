@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const reviews = [
   {
     id: 1,
-    name: "Thomas Janssen",
+    name: "Klajdi Beqiraj",
     company: "NordicPro",
     image: "/reviews/reviewer-1.png",
     rating: 5,
@@ -26,8 +26,8 @@ const reviews = [
   },
   {
     id: 3,
-    name: "Mark de Vries",
-    company: "Auto Showcase",
+    name: "Dennis van Leeuwen",
+    company: "Motor Gein",
     image: "/reviews/reviewer-3.png",
     rating: 5,
     text: "De samenwerking met TriviTurbo verliep vlekkeloos. Ze hebben een website opgeleverd die precies de premium uitstraling heeft waar we naar op zoek waren. We zijn vooral onder de indruk van het gebruiksgemak en het strakke design.",
@@ -36,7 +36,7 @@ const reviews = [
   },
   {
     id: 4,
-    name: "Joris Bakker",
+    name: "Maarten Blom",
     company: "Wolf Brew",
     image: "/reviews/reviewer-4.png",
     rating: 5,
@@ -46,7 +46,7 @@ const reviews = [
   },
   {
     id: 5,
-    name: "Emma Visser",
+    name: "Eva Kuiper",
     company: "NatuurWonderen",
     image: "/reviews/reviewer-5.png",
     rating: 5,

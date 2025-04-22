@@ -42,10 +42,11 @@ const pageContent = {
       },
       {
         name: "Website + Blog",
-        price: "€450",
+        price: "€500",
         description: "Voor groeiende bedrijven",
         features: [
           "Alles van het Onepager pakket",
+          "Meerdere pagina's (tot 5 pagina's)",
           "Professionele blog pagina",
           "Content Management Systeem",
         ],
@@ -53,14 +54,12 @@ const pageContent = {
       },
       {
         name: "AI Chatbot",
-        price: "€750",
+        price: "+ €250",
         description: "Voor innovatieve ondernemers",
         features: [
-          "Alles van het Website + Blog pakket",
           "AI Chatbot op maat voor uw bedrijf",
           "Getraind op uw bedrijfsgegevens",
           "24/7 klantenservice automatisering",
-          "Leadgeneratie en kwalificatie",
           "Gedetailleerde analytics dashboard",
         ],
         bestFor: "Innovatieve bedrijven, e-commerce, bedrijven met veel klantenservice vragen",

@@ -12,7 +12,7 @@ export default function ProcessSection() {
     {
       icon: <Phone className="h-10 w-10 text-white" />,
       title: "Contact",
-      description: "U neemt contact met ons op, geen compromissen.",
+      description: "U neemt contact met ons op.",
       color: "bg-[#072ac8]",
       shadowColor: "shadow-[#072ac8]/20",
       hoverColor: "group-hover:bg-[#0625a3]",
@@ -28,7 +28,7 @@ export default function ProcessSection() {
     {
       icon: <CheckCircle className="h-10 w-10 text-white" />,
       title: "Ontwerp",
-      description: "We bespreken het ontwerp op basis van uw ideeën.",
+      description: "We bespreken het ontwerp op basis van uw ideeën. U levert de content en het logo aan, of wij helpen u daarbij.",
       color: "bg-[#a2d6f9]",
       shadowColor: "shadow-[#a2d6f9]/20",
       hoverColor: "group-hover:bg-[#7fc1f0]",
@@ -37,7 +37,7 @@ export default function ProcessSection() {
       icon: <Rocket className="h-10 w-10 text-white" />,
       title: "Ontwikkeling",
       description:
-        "We bouwen uw website met de beste beschikbare technologie, bugvrij, extreem performant en razendsnel.",
+        "We bouwen binnen 24 uur uw website met de beste technologie, bugvrij en razendsnel.",
       color: "bg-[#ffc600]",
       shadowColor: "shadow-[#ffc600]/20",
       hoverColor: "group-hover:bg-[#e6b200]",

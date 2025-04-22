@@ -29,7 +29,7 @@ export default function PricingSection() {
               </div>
 
               <div className="mb-6">
-                <span className="text-4xl lg:text-5xl font-bold text-gray-900">€300</span>
+                <span className="text-4xl lg:text-5xl font-bold text-gray-900">300</span>
                 <span className="text-gray-500 ml-2">eenmalig</span>
               </div>
 
@@ -89,7 +89,7 @@ export default function PricingSection() {
               </div>
 
               <div className="mb-6">
-                <span className="text-4xl lg:text-5xl font-bold text-white">€500</span>
+                <span className="text-4xl lg:text-5xl font-bold text-white">500</span>
                 <span className="text-white/80 ml-2">eenmalig</span>
               </div>
 
@@ -103,6 +103,12 @@ export default function PricingSection() {
                     <Check className="h-4 w-4 text-[#072ac8]" />
                   </div>
                   <span className="ml-3 text-white">Alles van het Onepager pakket</span>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-white flex items-center justify-center mt-0.5">
+                    <Check className="h-4 w-4 text-[#072ac8]" />
+                  </div>
+                  <span className="ml-3 text-white">Meerdere pagina's (tot 5 pagina's)</span>
                 </div>
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-6 w-6 rounded-full bg-white flex items-center justify-center mt-0.5">
@@ -134,7 +140,7 @@ export default function PricingSection() {
               </div>
 
               <div className="mb-6">
-                <span className="text-4xl lg:text-5xl font-bold text-gray-900">+ €250</span>
+                <span className="text-4xl lg:text-5xl font-bold text-gray-900">+ 250</span>
                 <span className="text-gray-700 ml-2">eenmalig</span>
               </div>
 
@@ -179,7 +185,7 @@ export default function PricingSection() {
             className="border-[#072ac8] text-[#072ac8] hover:bg-[#072ac8] hover:text-white"
             asChild
           >
-            <Link href="#contact">Even sparren?</Link>
+            <Link href="#contact">Vrijblijvend advies?</Link>
           </Button>
         </div>
       </div>

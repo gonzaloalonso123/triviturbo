@@ -98,7 +98,7 @@ export default function TeamImageReveal() {
             >
               <Image
                 src="/trivi-turbo-hero-us.webp"
-                alt="Ons echte team met octopus Hank"
+                alt="Ons echte team met octopus Otto"
                 fill
                 className="object-cover object-center"
                 priority
@@ -150,7 +150,7 @@ export default function TeamImageReveal() {
             transition={{ duration: 0.3 }}
           >
             <p className="font-bold text-xl">Ons Echte Team</p>
-            <p className="text-base opacity-90">Met onze mascotte Hank de Octopus</p>
+            <p className="text-base opacity-90">Met onze mascotte Otto de Octopus</p>
           </motion.div>
         )}
 
