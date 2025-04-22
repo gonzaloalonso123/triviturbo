@@ -26,6 +26,9 @@ export default function HeroSection() {
               <Button className="bg-[#fcf300] hover:bg-[#ffc600] text-[#072ac8] font-bold text-lg px-8 py-6" asChild>
                 <Link href="#contact">Ik wil een website</Link>
               </Button>
+              <Button className="bg-[#072ac8] hover:bg-[#ffc600] text-white font-bold text-lg px-8 py-6" asChild>
+                <Link href="#contact">Even contact?</Link>
+              </Button>
             </div>
           </div>
 
