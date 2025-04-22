@@ -54,12 +54,6 @@ export default function PricingSection() {
                   <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#a2d6f9] flex items-center justify-center mt-0.5">
                     <Check className="h-4 w-4 text-[#072ac8]" />
                   </div>
-                  <span className="ml-3 text-gray-700">Wij beheren uw hosting en domein</span>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#a2d6f9] flex items-center justify-center mt-0.5">
-                    <Check className="h-4 w-4 text-[#072ac8]" />
-                  </div>
                   <span className="ml-3 text-gray-700">Social media integratie</span>
                 </div>
                 <div className="flex items-start">
@@ -95,7 +89,7 @@ export default function PricingSection() {
               </div>
 
               <div className="mb-6">
-                <span className="text-4xl lg:text-5xl font-bold text-white">€450</span>
+                <span className="text-4xl lg:text-5xl font-bold text-white">€500</span>
                 <span className="text-white/80 ml-2">eenmalig</span>
               </div>
 
@@ -140,7 +134,7 @@ export default function PricingSection() {
               </div>
 
               <div className="mb-6">
-                <span className="text-4xl lg:text-5xl font-bold text-gray-900">€750</span>
+                <span className="text-4xl lg:text-5xl font-bold text-gray-900">+ €250</span>
                 <span className="text-gray-700 ml-2">eenmalig</span>
               </div>
 
@@ -149,13 +143,7 @@ export default function PricingSection() {
               </Button>
 
               <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#072ac8] flex items-center justify-center mt-0.5">
-                    <Check className="h-4 w-4 text-[#fcf300]" />
-                  </div>
-                  <span className="ml-3 text-gray-800">Alles van het Website + Blog pakket</span>
-                </div>
-                <div className="flex items-start">
+               <div className="flex items-start">
                   <div className="flex-shrink-0 h-6 w-6 rounded-full bg-[#072ac8] flex items-center justify-center mt-0.5">
                     <Star className="h-4 w-4 text-[#fcf300]" />
                   </div>

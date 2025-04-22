@@ -121,7 +121,7 @@ export default function TeamImageReveal() {
           ) : (
             <>
               <Hand className="w-4 h-4 mr-1" />
-              {isMobile ? "Tik" : "Beweeg"} over de robot
+              {isMobile ? "Tik op" : "Beweeg over"}  de robot
             </>
           )}
         </div>

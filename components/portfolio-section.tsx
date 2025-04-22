@@ -38,7 +38,7 @@ const portfolioItems = [
     features: ["Productcatalogus", "Blog"],
     completionTime: "24 uur",
     testimonial: {
-      text: "Omdat wij ons met onze hoogwaardige designmeubels onderscheiden van andere interieurwinkels, is het belangrijk dat dit ook goed via de website tot uiting komt. De jongens van Trivi-Turbo hebben dat perfect aangevoeld. Dankjewel!",
+      text: "Omdat wij ons met onze hoogwaardige designmeubels onderscheiden van andere interieurwinkels, is het belangrijk dat dit ook goed via de website tot uiting komt. De jongens van TriviTurbo hebben dat perfect aangevoeld. Dankjewel!",
       author: "Lisa van der Meer, Eigenaar Trendy Meubels",
     },
   },
@@ -53,7 +53,7 @@ const portfolioItems = [
     features: ["Geavanceerde filtering", "Blog"],
     completionTime: "24 uur",
     testimonial: {
-      text: "De samenwerking met Trivi-Turbo verliep vlekkeloos. Ze hebben een website opgeleverd die precies de premium uitstraling heeft waar we naar op zoek waren. We zijn vooral onder de indruk van het gebruiksgemak en het strakke design.",
+      text: "De samenwerking met TriviTurbo verliep vlekkeloos. Ze hebben een website opgeleverd die precies de premium uitstraling heeft waar we naar op zoek waren. We zijn vooral onder de indruk van het gebruiksgemak en het strakke design.",
       author: "Mark de Vries, Marketing Manager Auto Showcase",
     },
   },
@@ -84,7 +84,7 @@ const portfolioItems = [
     features: ["Blog"],
     completionTime: "24 uur",
     testimonial: {
-      text: "Na een aantal nare ervaringen met websitebouwers, hoorde ik via een vriend over Trivi-Turbo. Sinds het eerste contact met Floris had ik al vertrouwen in de samenwerking. We zijn superblij met het eindresultaat, het straalt echt uit wie wij zijn en waar wij voor staan. Bovendien maakt het het voor ouders en jongeren heel gemakkelijk om zichzelf in te lezen en een plekje op kamp te boeken!",
+      text: "Na een aantal nare ervaringen met websitebouwers, hoorde ik via een vriend over TriviTurbo. Sinds het eerste contact met Floris had ik al vertrouwen in de samenwerking. We zijn superblij met het eindresultaat, het straalt echt uit wie wij zijn en waar wij voor staan. Bovendien maakt het het voor ouders en jongeren heel gemakkelijk om zichzelf in te lezen en een plekje op kamp te boeken!",
       author: "Emma Visser, Directeur NatuurWonderen",
     },
   },
@@ -99,7 +99,7 @@ const portfolioItems = [
     features: ["Prijsvergelijking", "Kortingscodes", "Productdatabase", "Filteropties"],
     completionTime: "24 uur",
     testimonial: {
-      text: "De mannen van Trivi-Turbo hebben onze complexe vergelijkingswebsite netjes volgens de afgesproken deadlines opgeleverd. Het contact verliep soepel: geen verkooppraatjes, maar wel mooie resultaten. Top!",
+      text: "De mannen van TriviTurbo hebben onze complexe vergelijkingswebsite netjes volgens de afgesproken deadlines opgeleverd. Het contact verliep soepel: geen verkooppraatjes, maar wel mooie resultaten. Top!",
       author: "Timo Blaauw, Oprichter GierigGroeien",
     },
   },
@@ -115,7 +115,7 @@ const portfolioItems = [
     features: ["Interactieve elementen", "Animaties", "Speluitleg", "Online winkel"],
     completionTime: "24 uur",
     testimonial: {
-      text: "De website die Trivi-Turbo heeft gemaakt, overtreft al onze verwachtingen. De visuele kwaliteit en interactieve elementen zorgen ervoor dat het echt voelt alsof je je waant in de wereld van Hashiban.",
+      text: "De website die TriviTurbo heeft gemaakt, overtreft al onze verwachtingen. De visuele kwaliteit en interactieve elementen zorgen ervoor dat het echt voelt alsof je je waant in de wereld van Hashiban.",
       author: "Maria Alonso, Game Designer La Subasta de Hashiban",
     },
   },

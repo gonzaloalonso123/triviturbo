@@ -8,7 +8,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Trivi-Turbo | Snelle Website Ontwikkeling",
+  title: "TriviTurbo | Snelle Website Ontwikkeling",
   description:
     "Wij bouwen snelle en betaalbare websites met behulp van de nieuwste AI-technologieën. Krijg uw website binnen 24 uur voor slechts €300.",
     generator: 'v0.dev'

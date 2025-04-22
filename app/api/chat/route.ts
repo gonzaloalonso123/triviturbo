@@ -33,7 +33,6 @@ const pageContent = {
         features: [
           "Professionele onepage website",
           "Contactformulier inbegrepen",
-          "Wij beheren uw hosting en domein",
           "Social media integratie",
           "SEO geoptimaliseerd",
           "Levering binnen 24 uur",
