@@ -24,7 +24,7 @@ const portfolioItems = [
     completionTime: "24 uur",
     testimonial: {
       text: "TriviTurbo heeft onze visie op teamgeest, sport en mentale gezondheid perfect vertaald naar een gebruiksvriendelijk platform. De snelheid waarmee ze hebben geleverd, was indrukwekkend!",
-      author: "Klajdi, Oprichter NordicPro",
+      author: "Klajdi Beqiraj, Oprichter NordicPro",
     },
   },
   {
