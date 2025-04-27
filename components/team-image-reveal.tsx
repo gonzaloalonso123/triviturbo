@@ -5,7 +5,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Sparkles, Hand } from "lucide-react";
 import { useMediaQuery } from "@/hooks/use-media-query";
-import { debounce } from "lodash";
 
 export default function TeamImageReveal() {
   const [isRevealed, setIsRevealed] = useState(false);
@@ -42,12 +41,9 @@ export default function TeamImageReveal() {
     },
   };
 
-  const handleInteraction = useCallback(
-    debounce(() => {
-      setIsRevealed((prev) => !prev);
-    }, 300),
-    []
-  );
+  const handleInteraction = () => {
+    setIsRevealed((prev) => !prev);
+  };
 
   return (
     <div className="relative w-full max-w-xl mx-auto flex items-center justify-center py-8">
@@ -57,7 +53,8 @@ export default function TeamImageReveal() {
           className="absolute inset-0 cursor-pointer"
           style={{
             overflow: "hidden",
-            boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+            boxShadow:
+              "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
             willChange: "clip-path, transform, opacity",
           }}
           initial="initial"
@@ -110,7 +107,9 @@ export default function TeamImageReveal() {
 
         <div
           className={`absolute top-20 right-4 z-40 px-3 py-1 rounded-full text-sm font-bold shadow-md flex items-center transition-all duration-300 ${
-            isRevealed ? "bg-yellow-300 text-[#072ac8]" : "bg-[#072ac8] text-white"
+            isRevealed
+              ? "bg-yellow-300 text-[#072ac8]"
+              : "bg-[#072ac8] text-white"
           }`}
         >
           {isRevealed ? (
@@ -121,7 +120,7 @@ export default function TeamImageReveal() {
           ) : (
             <>
               <Hand className="w-4 h-4 mr-1" />
-              {isMobile ? "Tik op" : "Beweeg over"}  de robot
+              {isMobile ? "Tik op" : "Beweeg over"} de robot
             </>
           )}
         </div>
@@ -150,7 +149,9 @@ export default function TeamImageReveal() {
             transition={{ duration: 0.3 }}
           >
             <p className="font-bold text-xl">Ons Echte Team</p>
-            <p className="text-base opacity-90">Met onze mascotte Otto de Octopus</p>
+            <p className="text-base opacity-90">
+              Met onze mascotte Otto de Octopus
+            </p>
           </motion.div>
         )}
 

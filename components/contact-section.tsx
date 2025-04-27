@@ -38,9 +38,10 @@ export default function ContactSection() {
         serviceId,
         templateId,
         {
+          type: "PAID WEBSITE REQUEST",
           from_name: formData.name,
           from_email: formData.email,
-          phone: formData.phone,
+          from_phone: formData.phone,
           message: formData.message,
           to_email: 'info@triviturbo.nl',
         },
