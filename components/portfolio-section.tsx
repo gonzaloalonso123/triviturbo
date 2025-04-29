@@ -16,7 +16,7 @@ const portfolioItems = [
     title: "NordicPro",
     category: "Sport & Gezondheid",
     description:
-      "Een platform voor jeugdteams dat mentale gezondheid, motivatie en teambeheer op één plek samenbrengt. Gebouwd met React en Next.js.",
+      "Een platform voor jeugdteams dat mentale gezondheid, motivatie en teambeheer op één plek samenbrengt.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-2quqE0vORs9zNGxlDsyBRbxkVXcOkq.png",
     tags: ["Sport", "Mentale Gezondheid", "Teammanagement"],
     features: ["Wachtlijst", "Blog", "Brandbook"],
@@ -31,7 +31,7 @@ const portfolioItems = [
     title: "Trendy Meubels",
     category: "E-commerce",
     description:
-      "Een elegante webshop voor een meubelwinkel met een focus op karaktervolle, innovatieve ontwerpen. Gebouwd met Shopify en custom CSS.",
+      "Een elegante webshop voor een meubelwinkel met een focus op karaktervolle, innovatieve ontwerpen.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jotcDegGXQenfuNw69TpjZw1t9IraG.png",
     tags: ["Meubels", "E-commerce", "Design"],
     features: ["Productcatalogus", "Blog"],
@@ -46,7 +46,7 @@ const portfolioItems = [
     title: "Motor Gein",
     category: "Automotive",
     description:
-      "Een premium website voor het showcasen van luxe auto's met gedetailleerde productpagina's en een strak design. Gebouwd met Vue.js.",
+      "Een premium website voor het showcasen van luxe auto's met gedetailleerde productpagina's en een strak design.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-46uR6nGAvEr9DQtHxkUSKG4hZBwYux.png",
     tags: ["Automotive", "Luxe", "Showcase"],
     features: ["Geavanceerde filtering", "Blog"],
@@ -61,7 +61,7 @@ const portfolioItems = [
     title: "Wolf Brew",
     category: "Food & Drank",
     description:
-      "Een smaakvolle website voor een ambachtelijke brouwerij met productpresentatie en online besteloptie. Gebouwd met WordPress en WooCommerce.",
+      "Een smaakvolle website voor een ambachtelijke brouwerij met productpresentatie en online besteloptie.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-7rbUdTGPbNLxn9LAFKoq0PYsw8XfY0.png",
     tags: ["Brouwerij", "Ambachtelijk", "E-commerce"],
     features: ["Productcatalogus", "Blog"],
@@ -76,7 +76,7 @@ const portfolioItems = [
     title: "NatuurWonderen",
     category: "Recreatie & Toerisme",
     description:
-      "Een levendige website voor een buitenactiviteitenbedrijf met online boekingssysteem en activiteitenoverzicht. Gebouwd met React.",
+      "Een levendige website voor een buitenactiviteitenbedrijf met online boekingssysteem en activiteitenoverzicht.",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-04-20%20at%2014.29.01-YxoSc1oWT6v9RCBwYyIPqW2eBfvipF.png",
     tags: ["Natuur", "Activiteiten", "Boekingen"],
@@ -92,7 +92,7 @@ const portfolioItems = [
     title: "GierigGroeien",
     category: "Vergelijkingswebsite",
     description:
-      "De toonaangevende supplementenvergelijker van Nederland. Een gebruiksvriendelijke website die consumenten helpt de beste deals te vinden. Gebouwd met React en Node.js.",
+      "De toonaangevende supplementenvergelijker van Nederland. Een gebruiksvriendelijke website die consumenten helpt de beste deals te vinden.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ZALp9iYEFkWXdKN6hMsZCYdsEleIsE.png",
     tags: ["Supplementen", "Prijsvergelijking", "E-commerce"],
     features: ["Prijsvergelijking", "Kortingscodes", "Productdatabase", "Filteropties"],
@@ -107,7 +107,7 @@ const portfolioItems = [
     title: "La Subasta de Hashiban",
     category: "Gaming & Entertainment",
     description:
-      "Een visueel indrukwekkende website voor een fantasy kaartspel met prachtige illustraties en een meeslepende gebruikerservaring. Gebouwd met Three.js en WebGL.",
+      "Een visueel indrukwekkende website voor een fantasy kaartspel met prachtige illustraties en een meeslepende gebruikerservaring.",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-04-20%20at%2014.34.39-ZA10u5kQj4Wq3UIH87CGg7hHWTw7Co.png",
     tags: ["Kaartspel", "Fantasy", "Gaming"],

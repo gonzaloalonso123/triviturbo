@@ -8,23 +8,16 @@ export default function GratisOntwerpPageClient() {
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-5xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center mb-6">
-            <span className="text-2xl font-bold text-[#072ac8]">
-              Trivi-Turbo
-            </span>
-          </div>
-
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
-            Binnen 24 uur een gratis website ontwerp voor jouw zangpraktijk!
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 leading-tight text-black">
+            Binnen 24 uur een <span className="text-sky-500">gratis</span> website ontwerp voor{" "}
+            <span className="text-blue-800">jouw zangpraktijk!</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-            Geen kosten. Geen verplichtingen. Alleen een vrijblijvend voorbeeld
-            van jouw nieuwe website.
+            Geen kosten. Geen verplichtingen. Alleen een vrijblijvend voorbeeld van jouw nieuwe website.
           </p>
 
-          {/* USPs in a creative wave layout */}
-          <div className="relative my-12 overflow-hidden rounded-2xl bg-gradient-to-r from-[#072ac8]/5 to-[#1e96fc]/5 p-8">
+          <div className="relative my-6 overflow-hidden rounded-2xl bg-gradient-to-r from-[#072ac8]/5 to-[#1e96fc]/5 p-8">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#ffc600]/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#072ac8]/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
 
@@ -36,8 +29,7 @@ export default function GratisOntwerpPageClient() {
                       <ClockIcon className="h-5 w-5 text-[#072ac8]" />
                     </div>
                     <span className="ml-3 text-gray-700">
-                      <strong>Binnen 24 uur</strong> een mock-up speciaal voor
-                      jouw praktijk.
+                      <strong>Binnen 24 uur</strong> een website ontwerp speciaal voor jouw zangpraktijk.
                     </span>
                   </div>
                 </div>
@@ -50,8 +42,7 @@ export default function GratisOntwerpPageClient() {
                       <PaletteIcon className="h-5 w-5 text-[#072ac8]" />
                     </div>
                     <span className="ml-3 text-gray-700">
-                      <strong>Afgestemd op jouw stijl</strong>, wensen en
-                      huidige website.
+                      <strong>Afgestemd op jouw stijl</strong>, wensen en huidige website.
                     </span>
                   </div>
                 </div>
@@ -64,8 +55,7 @@ export default function GratisOntwerpPageClient() {
                       <ThumbsUpIcon className="h-5 w-5 text-[#072ac8]" />
                     </div>
                     <span className="ml-3 text-gray-700">
-                      <strong>Helemaal vrijblijvend</strong> – alleen bekijken
-                      als inspiratie.
+                      <strong>Helemaal vrijblijvend</strong> – alleen bekijken als inspiratie.
                     </span>
                   </div>
                 </div>
@@ -84,19 +74,16 @@ export default function GratisOntwerpPageClient() {
               <div className="mt-6 text-center text-sm text-gray-500 space-y-2">
                 <p className="flex items-center justify-center">
                   <EmailIcon className="h-4 w-4 mr-2 text-gray-400" />
-                  Binnen 24 uur ontvang je jouw persoonlijke mock-up in je
-                  inbox.
+                  Binnen 24 uur ontvang je jouw persoonlijke website ontwerp in je inbox.
                 </p>
-                <p>We nemen alleen contact op over jouw mock-up, geen spam.</p>
+                <p>We nemen alleen contact op over jouw website ontwerp, geen spam.</p>
               </div>
             </div>
           </div>
         </div>
 
         <div className="mt-16 text-center text-sm text-gray-500">
-          <p>
-            © {new Date().getFullYear()} Trivi-Turbo. Alle rechten voorbehouden.
-          </p>
+          <p>© {new Date().getFullYear()} Trivi-Turbo. Alle rechten voorbehouden.</p>
         </div>
       </div>
     </div>

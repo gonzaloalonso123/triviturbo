@@ -22,9 +22,7 @@ export default function ZangpraktijkForm() {
     preferences: "",
   });
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -35,22 +33,8 @@ export default function ZangpraktijkForm() {
 
     try {
       const serviceId = "service_u6x2do2";
-      const templateIdBedankt = "template_oase3ds";
       const templateRequest = "template_twm96wa";
       const publicKey = "X_Bjt6rbE59Sd-EVk";
-
-      await emailjs.send(
-        serviceId,
-        templateIdBedankt,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          from_phone: formData.phone,
-          from_website: formData.website,
-          from_preferences: formData.preferences,
-        },
-        publicKey
-      );
 
       await emailjs.send(
         serviceId,
@@ -124,7 +108,7 @@ export default function ZangpraktijkForm() {
 
       <div>
         <Label htmlFor="website" className="text-gray-700 font-medium">
-          Huidige website URL
+          Huidige website URL (indien van toepassing)
         </Label>
         <Input
           id="website"
@@ -162,7 +146,7 @@ export default function ZangpraktijkForm() {
             Even geduld...
           </>
         ) : (
-          "Vraag mijn gratis mock-up aan"
+          "Vraag mijn gratis website ontwerp aan"
         )}
       </Button>
     </form>

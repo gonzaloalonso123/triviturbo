@@ -23,7 +23,6 @@ export default function RootLayout({
     <html lang="nl" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <Navbar />
           {children}
         </ThemeProvider>
       </body>

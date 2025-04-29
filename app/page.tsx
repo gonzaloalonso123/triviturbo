@@ -6,10 +6,12 @@ import PortfolioSection from "@/components/portfolio-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 import RobotAssistant from "@/components/robot-assistant";
+import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <Navbar />
       <HeroSection />
       <PricingSection />
       <ProcessSection />
