@@ -11,21 +11,21 @@ import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 
 const portfolioItems = [
-  {
-    id: 1,
-    title: "NordicPro",
-    category: "Sport & Gezondheid",
-    description:
-      "Een platform voor jeugdteams dat mentale gezondheid, motivatie en teambeheer op één plek samenbrengt.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-2quqE0vORs9zNGxlDsyBRbxkVXcOkq.png",
-    tags: ["Sport", "Mentale Gezondheid", "Teammanagement"],
-    features: ["Wachtlijst", "Blog", "Brandbook"],
-    completionTime: "24 uur",
-    testimonial: {
-      text: "TriviTurbo heeft onze visie op teamgeest, sport en mentale gezondheid perfect vertaald naar een gebruiksvriendelijk platform. De snelheid waarmee ze hebben geleverd, was indrukwekkend!",
-      author: "Klajdi Beqiraj, Oprichter NordicPro",
-    },
-  },
+  // {
+  //   id: 1,
+  //   title: "NordicPro",
+  //   category: "Sport & Gezondheid",
+  //   description:
+  //     "Een platform voor jeugdteams dat mentale gezondheid, motivatie en teambeheer op één plek samenbrengt.",
+  //   image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-2quqE0vORs9zNGxlDsyBRbxkVXcOkq.png",
+  //   tags: ["Sport", "Mentale Gezondheid", "Teammanagement"],
+  //   features: ["Wachtlijst", "Blog", "Brandbook"],
+  //   completionTime: "24 uur",
+  //   testimonial: {
+  //     text: "TriviTurbo heeft onze visie op teamgeest, sport en mentale gezondheid perfect vertaald naar een gebruiksvriendelijk platform. De snelheid waarmee ze hebben geleverd, was indrukwekkend!",
+  //     author: "Klajdi Beqiraj, Oprichter NordicPro",
+  //   },
+  // },
   {
     id: 2,
     title: "Trendy Meubels",
@@ -102,22 +102,22 @@ const portfolioItems = [
       author: "Timo Blaauw, Oprichter GierigGroeien",
     },
   },
-  {
-    id: 7,
-    title: "La Subasta de Hashiban",
-    category: "Gaming & Entertainment",
-    description:
-      "Een visueel indrukwekkende website voor een fantasy kaartspel met prachtige illustraties en een meeslepende gebruikerservaring.",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-04-20%20at%2014.34.39-ZA10u5kQj4Wq3UIH87CGg7hHWTw7Co.png",
-    tags: ["Kaartspel", "Fantasy", "Gaming"],
-    features: ["Interactieve elementen", "Animaties", "Speluitleg", "Online winkel"],
-    completionTime: "24 uur",
-    testimonial: {
-      text: "De website die TriviTurbo heeft gemaakt, overtreft al onze verwachtingen. De visuele kwaliteit en interactieve elementen zorgen ervoor dat het echt voelt alsof je je waant in de wereld van Hashiban.",
-      author: "Maria Alonso, Game Designer La Subasta de Hashiban",
-    },
-  },
+  // {
+  //   id: 7,
+  //   title: "La Subasta de Hashiban",
+  //   category: "Gaming & Entertainment",
+  //   description:
+  //     "Een visueel indrukwekkende website voor een fantasy kaartspel met prachtige illustraties en een meeslepende gebruikerservaring.",
+  //   image:
+  //     "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-04-20%20at%2014.34.39-ZA10u5kQj4Wq3UIH87CGg7hHWTw7Co.png",
+  //   tags: ["Kaartspel", "Fantasy", "Gaming"],
+  //   features: ["Interactieve elementen", "Animaties", "Speluitleg", "Online winkel"],
+  //   completionTime: "24 uur",
+  //   testimonial: {
+  //     text: "De website die TriviTurbo heeft gemaakt, overtreft al onze verwachtingen. De visuele kwaliteit en interactieve elementen zorgen ervoor dat het echt voelt alsof je je waant in de wereld van Hashiban.",
+  //     author: "Maria Alonso, Game Designer La Subasta de Hashiban",
+  //   },
+  // },
 ];
 
 export default function PortfolioSection() {
@@ -254,9 +254,8 @@ export default function PortfolioSection() {
             {portfolioItems.map((item, index) => (
               <Card
                 key={item.id}
-                className={`overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg ${
-                  currentProject === index && activeCategory === "all" ? "ring-2 ring-[#072ac8]" : ""
-                }`}
+                className={`overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg ${currentProject === index && activeCategory === "all" ? "ring-2 ring-[#072ac8]" : ""
+                  }`}
                 onClick={() => {
                   setActiveCategory("all");
                   setCurrentProject(index);

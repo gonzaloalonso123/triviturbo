@@ -46,9 +46,9 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <TeamImageReveal />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
